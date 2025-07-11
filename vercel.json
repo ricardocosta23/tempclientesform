@@ -4,15 +4,15 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "/app.py"
     }
   ],
-  "functions": {
-    "app.py": {
-      "maxDuration": 60,
-      "memory": 1024
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
     }
-  },
+  ],
   "env": {
     "VERCEL": "1"
   }
