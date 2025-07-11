@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema de Formulários{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <div class="survey-container">
+        <div class="survey-card">
+            {% block content %}
+            <div class="survey-header">
+                <div class="header-icons">
+                    <div class="icon-wrapper">
+                        <i data-feather="settings"></i>
+                    </div>
+                </div>
+                <h1 class="survey-title">Sistema de Formulários</h1>
+                <p class="survey-subtitle">Geração dinâmica de formulários com integração Monday.com</p>
+            </div>
+            
+            <div class="text-center">
+                <a href="/admin" class="btn btn-primary btn-lg">
+                    <i data-feather="settings" class="me-2"></i>
+                    Acessar Painel Administrativo
+                </a>
+            </div>
+            
+            <div class="mt-4">
+                <h3 class="text-center mb-3">Endpoints de Webhook</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i data-feather="map" class="mb-2" style="color: #8bc9ba;"></i>
+                                <h5 class="card-title">Guias</h5>
+                                <code class="small">/formguias</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i data-feather="users" class="mb-2" style="color: #8bc9ba;"></i>
+                                <h5 class="card-title">Clientes</h5>
+                                <code class="small">/formclientes</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i data-feather="truck" class="mb-2" style="color: #8bc9ba;"></i>
+                                <h5 class="card-title">Fornecedores</h5>
+                                <code class="small">/formfornecedores</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Initialize Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+    
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

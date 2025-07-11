@@ -1,0 +1,194 @@
+{
+  "type": "guias",
+  "title": "Formulário de Avaliação - Guias",
+  "subtitle": "Avalie nossos serviços de guia turístico",
+  "questions": [
+    {
+      "destination_column": "text_mksdvk9t",
+      "id": "guide_name",
+      "required": true,
+      "source": "manual",
+      "text": " Nome de quem está avaliando:",
+      "type": "text"
+    },
+    {
+      "destination_column": "text_mkspcg2t",
+      "dropdown_options": "Guia;Monitor;Coordenador",
+      "id": "guide_role",
+      "is_conditional": false,
+      "required": true,
+      "source": "manual",
+      "text": "Qual foi sua função durante o evento?",
+      "type": "dropdown"
+    },
+    {
+      "destination_column": "text_mksd83pc",
+      "id": "guide_malha_aerea",
+      "is_conditional": false,
+      "required": true,
+      "source": "manual",
+      "text": "Teve malha aérea na viagem?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdw5nf",
+      "id": "question_1752079374857",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "Nota malha aérea",
+      "type": "rating"
+    },
+    {
+      "id": "question_1752158225918",
+      "required": false,
+      "source": "manual",
+      "text": "Informe as cias utilizadas para o grupo com uma breve avaliação, considerando: Pontualidade, serviço de bordo, bagagens e uma perspectiva geral sobre a dinâmica de embarque e desembarque.",
+      "type": "longtext",
+      "is_conditional": true,
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": ""
+      }
+    },
+    {
+      "destination_column": "text_mksd1r88",
+      "id": "guide_coordinator",
+      "required": true,
+      "source": "manual",
+      "text": "Quem foi seu coordenador direto?",
+      "type": "text"
+    },
+    {
+      "id": "question_1752158102105",
+      "required": true,
+      "source": "manual",
+      "text": "Teve No Show?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": ""
+      },
+      "id": "question_1752158124136",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "Informar quantidade de No show ",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": ""
+      },
+      "id": "question_1752158145271",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "Nome dos convidados No show ",
+      "type": "longtext"
+    },
+    {
+      "id": "question_1752158172655",
+      "required": true,
+      "source": "manual",
+      "text": "As marcações de assento foram adequadas ao grupo?",
+      "type": "rating"
+    },
+    {
+      "id": "question_1752158183825",
+      "required": false,
+      "source": "manual",
+      "text": "Teve equipe de assistência do aeroporto? ",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158183825",
+        "show_if": ""
+      },
+      "id": "question_1752158192367",
+      "is_conditional": true,
+      "required": false,
+      "source": "manual",
+      "text": "Nota assistência aeroporto",
+      "type": "rating"
+    },
+    {
+      "id": "question_1752158205456",
+      "required": false,
+      "source": "manual",
+      "text": "Teve conexão?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158205456",
+        "show_if": ""
+      },
+      "id": "question_1752158215774",
+      "is_conditional": true,
+      "required": false,
+      "source": "manual",
+      "text": "Nota do tempo de conexão",
+      "type": "rating"
+    }
+  ],
+  "header_data": [],
+  "webhook_data": {
+    "event": {
+      "app": "monday",
+      "type": "update_column_value",
+      "triggerTime": "2025-07-10T14:47:46.490Z",
+      "subscriptionId": 541271596,
+      "isRetry": false,
+      "userId": 5522044,
+      "originalTriggerUuid": null,
+      "boardId": 9241811459,
+      "groupId": "topics",
+      "pulseId": 9319035199,
+      "pulseName": "Mundo OTO",
+      "columnId": "color_mksp6ebp",
+      "columnType": "color",
+      "columnTitle": "Status",
+      "value": {
+        "label": {
+          "index": 2,
+          "text": "webhook",
+          "style": {
+            "color": "#df2f4a",
+            "border": "#ce3048",
+            "var_name": "red-shadow"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "previousValue": {
+        "label": {
+          "index": 5,
+          "text": null,
+          "style": {
+            "color": "#c4c4c4",
+            "border": "#b0b0b0",
+            "var_name": "grey"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "changedAt": 1752158866.1133943,
+      "isTopGroup": true,
+      "triggerUuid": "4e9a401d03c4db1935a2394bc2d13acd"
+    }
+  },
+  "id": "2dd8b058-e6ff-41ca-bd9c-126932edd834",
+  "created_at": "2025-07-10T14:47:47.126548",
+  "status": "active"
+}

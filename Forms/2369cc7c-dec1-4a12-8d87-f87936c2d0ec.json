@@ -1,0 +1,399 @@
+{
+  "type": "guias",
+  "title": "Formulário de Avaliação - Guias",
+  "subtitle": "Avalie nossos serviços de guia turístico",
+  "questions": [
+    {
+      "id": "guide_name",
+      "type": "text",
+      "text": " Nome de quem está avaliando:",
+      "required": true,
+      "source": "manual",
+      "destination_column": "text_mksdvk9t"
+    },
+    {
+      "id": "guide_role",
+      "type": "dropdown",
+      "text": "Qual foi sua função durante o evento?",
+      "required": true,
+      "source": "manual",
+      "dropdown_options": "Guia;Monitor;Coordenador",
+      "destination_column": "text_mkspcg2t"
+    },
+    {
+      "id": "guide_coordinator",
+      "type": "text",
+      "text": "Quem foi seu coordenador direto?",
+      "required": true,
+      "source": "manual",
+      "destination_column": "text_mksd1r88"
+    },
+    {
+      "id": "divider_1752173694375",
+      "type": "divider",
+      "title": "✈️ Malha Aérea"
+    },
+    {
+      "id": "guide_malha_aerea",
+      "type": "yesno",
+      "text": "Teve malha aérea na viagem?",
+      "required": true,
+      "source": "manual",
+      "destination_column": "text_mksd83pc"
+    },
+    {
+      "id": "question_1752079374857",
+      "type": "rating",
+      "text": "Nota malha aérea",
+      "required": true,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdw5nf"
+    },
+    {
+      "id": "question_1752158225918",
+      "type": "longtext",
+      "text": "Informe as cias utilizadas para o grupo com uma breve avaliação, considerando: Pontualidade, serviço de bordo, bagagens e uma perspectiva geral sobre a dinâmica de embarque e desembarque.",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158102105",
+      "type": "yesno",
+      "text": "Teve No Show?",
+      "required": true,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158124136",
+      "type": "text",
+      "text": "Informar quantidade de No show ",
+      "required": true,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158145271",
+      "type": "longtext",
+      "text": "Nome dos convidados No show ",
+      "required": true,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158172655",
+      "type": "rating",
+      "text": "As marcações de assento foram adequadas ao grupo?",
+      "required": true,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158183825",
+      "type": "yesno",
+      "text": "Teve equipe de assistência do aeroporto? ",
+      "required": false,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158192367",
+      "type": "rating",
+      "text": "Nota assistência aeroporto",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158183825",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158205456",
+      "type": "yesno",
+      "text": "Teve conexão?",
+      "required": false,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158215774",
+      "type": "rating",
+      "text": "Nota do tempo de conexão",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158205456",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "divider_1752173694375",
+      "type": "divider",
+      "title": "💼 DMC"
+    },
+    {
+      "id": "question_1752158878674",
+      "type": "yesno",
+      "text": "Trabalhamos com DMC?",
+      "required": false,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158899665",
+      "type": "text",
+      "text": "Nome do DMC",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158913249",
+      "type": "text",
+      "text": "Nome coordenador DMC",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158929184",
+      "type": "rating",
+      "text": "Avalie o DMC: De forma geral considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158940898",
+      "type": "yesno",
+      "text": "Usou mais um DMC?",
+      "required": false,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158960696",
+      "type": "text",
+      "text": "Nome do 2º DMC",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752158983407",
+      "type": "text",
+      "text": "Nome coordenador 2º DMC",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752159002448",
+      "type": "rating",
+      "text": "Avalie o segundo DMC: De forma geral considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "divider_1752173694375",
+      "type": "divider",
+      "title": "🚩 Guias Locais"
+    },
+    {
+      "id": "question_1752159011799",
+      "type": "yesno",
+      "text": "Tiveram Guias Locais?",
+      "required": false,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752159024351",
+      "type": "longtext",
+      "text": "Insira os nomes dos guias locais",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752159034847",
+      "type": "rating",
+      "text": "Avalie de forma geral o (s)  guia (s)  local: Considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação ",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752159053248",
+      "type": "longtext",
+      "text": "Utilize esse campo para comentários em relação ao operador local. Caso algum guia tenha tido uma atitude inadequada ou queira ressaltar alguma ocorrência utilize este campo.",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "divider_1752173694375",
+      "type": "divider",
+      "title": "🚌 Transfer"
+    },
+    {
+      "id": "question_1752159068118",
+      "type": "yesno",
+      "text": "Tivemos serviço de transfer?",
+      "required": false,
+      "source": "manual",
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752159078174",
+      "type": "rating",
+      "text": "Avalie de forma geral o serviço de  transfer considerando pontualidade, cordialidade, quantidade de veículos, limpeza e equipamentos.",
+      "required": true,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752159068118",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "question_1752159094536",
+      "type": "longtext",
+      "text": "Deixe seus comentários em relação ao transfer",
+      "required": false,
+      "source": "manual",
+      "conditional": {
+        "depends_on": "question_1752159068118",
+        "show_if": "yes"
+      },
+      "destination_column": ""
+    },
+    {
+      "id": "divider_1752173694375",
+      "type": "divider",
+      "title": "🛏️ Hotés"
+    },
+    {
+      "id": "question_1752160095686",
+      "type": "monday_column",
+      "text": "",
+      "required": false,
+      "source": "manual",
+      "source_column": "text_mkrj9z52",
+      "destination_column": "",
+      "column_value": "Noronha Hotel"
+    }
+  ],
+  "header_data": {
+    "Viagem": "Midway Noronha",
+    "Cliente": "Zurich Seguros",
+    "Destino": "Fernando de Noronha - PE, Brasil",
+    "Data": "2025-04-21"
+  },
+  "webhook_data": {
+    "event": {
+      "app": "monday",
+      "type": "update_column_value",
+      "triggerTime": "2025-07-10T18:55:43.748Z",
+      "subscriptionId": 541513714,
+      "isRetry": false,
+      "userId": 5522044,
+      "originalTriggerUuid": null,
+      "boardId": 9241811459,
+      "groupId": "topics",
+      "pulseId": 9332622622,
+      "pulseName": "Midway Noronha",
+      "columnId": "color_mksp6ebp",
+      "columnType": "color",
+      "columnTitle": "Status",
+      "value": {
+        "label": {
+          "index": 2,
+          "text": "webhook",
+          "style": {
+            "color": "#df2f4a",
+            "border": "#ce3048",
+            "var_name": "red-shadow"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "previousValue": {
+        "label": {
+          "index": 5,
+          "text": null,
+          "style": {
+            "color": "#c4c4c4",
+            "border": "#b0b0b0",
+            "var_name": "grey"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "changedAt": 1752173743.3082337,
+      "isTopGroup": true,
+      "triggerUuid": "82fadb7ab32485a9da7ccdcbdf315616"
+    }
+  },
+  "id": "2369cc7c-dec1-4a12-8d87-f87936c2d0ec",
+  "created_at": "2025-07-10T18:55:46.039420",
+  "status": "active"
+}

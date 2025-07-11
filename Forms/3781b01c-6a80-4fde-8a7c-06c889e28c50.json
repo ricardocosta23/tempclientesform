@@ -1,0 +1,658 @@
+{
+  "type": "guias",
+  "title": "Formulário de Avaliação para Guias",
+  "subtitle": "Avalie nossa viagem",
+  "questions": [
+    {
+      "id": "divider_1752174894752",
+      "title": "✏️ Dados Pessoais",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksdvk9t",
+      "id": "guide_name",
+      "required": true,
+      "source": "manual",
+      "text": " Nome de quem está avaliando:",
+      "type": "text"
+    },
+    {
+      "destination_column": "text_mksqftvq",
+      "dropdown_options": "Guia;Monitor;Coordenador",
+      "id": "guide_role",
+      "required": true,
+      "source": "manual",
+      "text": "Qual foi sua função durante o evento?",
+      "type": "dropdown"
+    },
+    {
+      "destination_column": "text_mksd1r88",
+      "id": "guide_coordinator",
+      "required": true,
+      "source": "manual",
+      "text": "Quem foi seu coordenador direto?",
+      "type": "text"
+    },
+    {
+      "id": "divider_1752174894752",
+      "title": "✈️ Malha Aérea",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksd83pc",
+      "id": "guide_malha_aerea",
+      "required": true,
+      "source": "manual",
+      "text": "Teve malha aérea na viagem?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdw5nf",
+      "id": "question_1752079374857",
+      "required": true,
+      "source": "manual",
+      "text": "Nota malha aérea",
+      "type": "rating"
+    },
+    {
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": "long_text_mksdw43g",
+      "id": "question_1752158225918",
+      "required": false,
+      "source": "manual",
+      "text": "Informe as cias utilizadas para o grupo com uma breve avaliação, considerando: Pontualidade, serviço de bordo, bagagens e uma perspectiva geral sobre a dinâmica de embarque e desembarque.",
+      "type": "longtext"
+    },
+    {
+      "destination_column": "text_mksdsh42",
+      "id": "question_1752158102105",
+      "required": true,
+      "source": "manual",
+      "text": "Teve No Show?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdwqef",
+      "id": "question_1752158124136",
+      "required": true,
+      "source": "manual",
+      "text": "Informar quantidade de No show ",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": "yes"
+      },
+      "destination_column": "long_text_mksdpbqr",
+      "id": "question_1752158145271",
+      "required": true,
+      "source": "manual",
+      "text": "Nome dos convidados No show ",
+      "type": "longtext"
+    },
+    {
+      "destination_column": "numeric_mksd3094",
+      "id": "question_1752158172655",
+      "required": true,
+      "source": "manual",
+      "text": "As marcações de assento foram adequadas ao grupo?",
+      "type": "rating"
+    },
+    {
+      "destination_column": "text_mksd9gy3",
+      "id": "question_1752158183825",
+      "required": false,
+      "source": "manual",
+      "text": "Teve equipe de assistência do aeroporto? ",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158183825",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdt1bq",
+      "id": "question_1752158192367",
+      "required": false,
+      "source": "manual",
+      "text": "Nota assistência aeroporto",
+      "type": "rating"
+    },
+    {
+      "destination_column": "text_mksd77w3",
+      "id": "question_1752158205456",
+      "required": false,
+      "source": "manual",
+      "text": "Teve conexão?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158205456",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksds0py",
+      "id": "question_1752158215774",
+      "required": false,
+      "source": "manual",
+      "text": "Nota do tempo de conexão",
+      "type": "rating"
+    },
+    {
+      "id": "divider_1752174894752",
+      "title": "💼 DMC",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksdfbbm",
+      "id": "question_1752158878674",
+      "required": false,
+      "source": "manual",
+      "text": "Trabalhamos com DMC?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": "text_mksdhgmp",
+      "id": "question_1752158899665",
+      "required": false,
+      "source": "manual",
+      "text": "Nome do DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": "text_mksdpj36",
+      "id": "question_1752158913249",
+      "required": false,
+      "source": "manual",
+      "text": "Nome coordenador DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdja3e",
+      "id": "question_1752158929184",
+      "required": false,
+      "source": "manual",
+      "text": "Avalie o DMC: De forma geral considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação",
+      "type": "rating"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752158940898",
+      "required": false,
+      "source": "manual",
+      "text": "Usou mais um DMC?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": "text_mksdaqvj",
+      "id": "question_1752158960696",
+      "required": false,
+      "source": "manual",
+      "text": "Nome do 2º DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": "text_mksdcb45",
+      "id": "question_1752158983407",
+      "required": false,
+      "source": "manual",
+      "text": "Nome coordenador 2º DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdv98h",
+      "id": "question_1752159002448",
+      "required": false,
+      "source": "manual",
+      "text": "Avalie o segundo DMC: De forma geral considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação",
+      "type": "rating"
+    },
+    {
+      "id": "divider_1752174894753",
+      "title": "🚩 Guias Locais",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksqbpvq",
+      "id": "question_1752159011799",
+      "required": false,
+      "source": "manual",
+      "text": "Tiveram Guias Locais?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": "long_text_mksdgq94",
+      "id": "question_1752159024351",
+      "required": false,
+      "source": "manual",
+      "text": "Insira os nomes dos guias locais",
+      "type": "longtext"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdsem2",
+      "id": "question_1752159034847",
+      "required": false,
+      "source": "manual",
+      "text": "Avalie de forma geral o(s) guia(s) local(is): Considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação. ",
+      "type": "rating"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": "long_text_mksdg5nd",
+      "id": "question_1752159053248",
+      "required": false,
+      "source": "manual",
+      "text": "Utilize esse campo para comentários em relação ao operador local. Caso algum guia tenha tido uma atitude inadequada ou queira ressaltar alguma ocorrência utilize este campo.",
+      "type": "longtext"
+    },
+    {
+      "id": "divider_1752174894753",
+      "title": "🚌 Transfer",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksd3zfv",
+      "id": "question_1752159068118",
+      "required": false,
+      "source": "manual",
+      "text": "Tivemos serviço de transfer?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159068118",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksd391j",
+      "id": "question_1752159078174",
+      "required": true,
+      "source": "manual",
+      "text": "Avalie de forma geral o serviço de  transfer considerando pontualidade, cordialidade, quantidade de veículos, limpeza e equipamentos.",
+      "type": "rating"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159068118",
+        "show_if": "yes"
+      },
+      "destination_column": "long_text_mksdxghk",
+      "id": "question_1752159094536",
+      "required": false,
+      "source": "manual",
+      "text": "Deixe seus comentários em relação ao transfer",
+      "type": "longtext"
+    },
+    {
+      "id": "divider_1752174894753",
+      "title": "🛏️ Hotés",
+      "type": "divider"
+    },
+    {
+      "destination_column": "numeric_mkrjpfxv",
+      "id": "question_1752160095686",
+      "question_destination_column": "text_mkrjf13y",
+      "required": false,
+      "source": "manual",
+      "source_column": "text_mkrj9z52",
+      "text": "",
+      "type": "monday_column",
+      "column_value": "Ramada Inn"
+    },
+    {
+      "destination_column": "numeric_mkrjg1ar",
+      "id": "question_1752174171731",
+      "question_destination_column": "text_mkrjk4yg",
+      "required": false,
+      "source": "manual",
+      "source_column": "text_mkrjz0tf",
+      "text": "",
+      "type": "monday_column",
+      "column_value": "Radisson"
+    },
+    {
+      "id": "divider_1752174894753",
+      "title": "🍴Alimentação",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksqsmjv",
+      "id": "question_1752174708360",
+      "required": true,
+      "source": "manual",
+      "text": "Tivemos alimentação inclusa?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752174708360",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksqce6j",
+      "id": "question_1752174756966",
+      "required": true,
+      "source": "manual",
+      "text": "Nota restaurantes",
+      "type": "rating"
+    },
+    {
+      "id": "question_1752177017103",
+      "required": false,
+      "source": "manual",
+      "text": "Comentários alimentação",
+      "type": "longtext"
+    },
+    {
+      "id": "divider_1752174909727",
+      "title": "🚣🏻‍♂️ Passeios",
+      "type": "divider"
+    },
+    {
+      "destination_column": "numeric_mkrj6132",
+      "id": "question_1752174932540",
+      "is_conditional": false,
+      "question_destination_column": "text_mksdf2av",
+      "required": false,
+      "source": "manual",
+      "source_column": "dropdown_mksdfja5",
+      "text": "",
+      "type": "monday_column",
+      "column_value": "Rafting"
+    },
+    {
+      "destination_column": "numeric_mksdsjte",
+      "id": "question_1752174958808",
+      "is_conditional": false,
+      "question_destination_column": "text_mksd268p",
+      "required": false,
+      "source": "manual",
+      "source_column": "dropdown_mksds964",
+      "text": "",
+      "type": "monday_column",
+      "column_value": "Cavalo"
+    },
+    {
+      "destination_column": "numeric_mksdyxw2",
+      "id": "question_1752174977015",
+      "is_conditional": false,
+      "question_destination_column": "text_mksdr0qv",
+      "required": true,
+      "source": "manual",
+      "source_column": "dropdown_mksdhq4q",
+      "text": "",
+      "type": "monday_column",
+      "column_value": "Balão"
+    },
+    {
+      "destination_column": "numeric_mksdy42p",
+      "id": "question_1752174998832",
+      "is_conditional": false,
+      "question_destination_column": "text_mksdppd8",
+      "required": true,
+      "source": "manual",
+      "source_column": "dropdown_mksdspz0",
+      "text": "",
+      "type": "monday_column",
+      "column_value": ""
+    },
+    {
+      "destination_column": "long_text_mksq9zqr",
+      "id": "question_1752175115236",
+      "is_conditional": false,
+      "required": false,
+      "source": "manual",
+      "text": "Comentários sobre passeios (se houver)",
+      "type": "longtext"
+    },
+    {
+      "id": "divider_1752179031730",
+      "title": "🚑 Ocorrências médicas",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksdp1ta",
+      "id": "question_1752177398886",
+      "required": true,
+      "source": "manual",
+      "text": "Houve ocorrências médicas?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752177398886",
+        "show_if": ""
+      },
+      "id": "question_1752177418807",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "O seguro foi acionado? ",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752177418807",
+        "show_if": ""
+      },
+      "destination_column": "text_mksd83af",
+      "id": "question_1752177448310",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "Informe se o convidado recebeu os comprovantes necessários para abertura do sinistro, por favor informe o nome do convidado e um breve descritivo da ocorrência.",
+      "type": "yesno"
+    },
+    {
+      "id": "divider_1752179076047",
+      "title": "🎒 Bagagens",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksdncb6",
+      "id": "question_1752177476605",
+      "required": false,
+      "source": "manual",
+      "text": "Houve extravio de bagagens?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752177476605",
+        "show_if": ""
+      },
+      "destination_column": "text_mksdncb6",
+      "id": "question_1752177496581",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "Foi aberto protocolo na cia aérea",
+      "type": "yesno"
+    },
+    {
+      "id": "divider_1752179106383",
+      "title": "💸 Custos extras",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksq4pty",
+      "id": "question_1752177527819",
+      "is_conditional": false,
+      "required": false,
+      "source": "manual",
+      "text": "Houve custos extras a serem cobrados do cliente? Se sim, lembre de justificar os gastos na planilha de despesas.",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752177527819",
+        "show_if": ""
+      },
+      "id": "question_1752178934330",
+      "is_conditional": true,
+      "required": false,
+      "source": "manual",
+      "text": "Quais custos?",
+      "type": "longtext"
+    },
+    {
+      "id": "divider_1752179141870",
+      "title": "✨ Material criação",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksdts20",
+      "id": "question_1752177675991",
+      "required": true,
+      "source": "manual",
+      "text": "Houve material de criação produzido pela TOP SERVICE e utilizado em Campo?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752177675991",
+        "show_if": ""
+      },
+      "destination_column": "numeric_mksqebx9",
+      "id": "question_1752177353487",
+      "is_conditional": true,
+      "required": false,
+      "source": "manual",
+      "text": "Avalie os materiais produzidos pela Top Service na viagem",
+      "type": "rating"
+    },
+    {
+      "id": "divider_1752179185973",
+      "title": "📄 Formulários",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksqqgxd",
+      "id": "question_1752177707455",
+      "required": false,
+      "source": "manual",
+      "text": "Em campo os convidados receberam formulário de avaliação da viagem da Top Sevice, enviado via Whatsapp ou QR Code?",
+      "type": "yesno"
+    },
+    {
+      "id": "divider_1752179242892",
+      "title": "💬 Comentários",
+      "type": "divider"
+    },
+    {
+      "id": "question_1752177753544",
+      "required": false,
+      "source": "manual",
+      "text": "Utilize esse campo para comentários adicionais",
+      "type": "longtext"
+    },
+    {
+      "id": "question_1752177770742",
+      "required": false,
+      "source": "manual",
+      "text": "De forma geral você gostaria de contribuir dando alguma elogio ou sugestão em relação à viagem?",
+      "type": "longtext"
+    }
+  ],
+  "header_data": {
+    "Viagem": "Top Trader XP",
+    "Cliente": "XP INC",
+    "Destino": "Miami, Flórida, EUA",
+    "Data": "2025-06-29"
+  },
+  "webhook_data": {
+    "event": {
+      "app": "monday",
+      "type": "update_column_value",
+      "triggerTime": "2025-07-10T20:51:21.087Z",
+      "subscriptionId": 541577513,
+      "isRetry": false,
+      "userId": 5522044,
+      "originalTriggerUuid": null,
+      "boardId": 9241811459,
+      "groupId": "topics",
+      "pulseId": 9312172556,
+      "pulseName": "Top Trader XP",
+      "columnId": "color_mksp6ebp",
+      "columnType": "color",
+      "columnTitle": "Status",
+      "value": {
+        "label": {
+          "index": 2,
+          "text": "Enviar webhook",
+          "style": {
+            "color": "#df2f4a",
+            "border": "#ce3048",
+            "var_name": "red-shadow"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "previousValue": {
+        "label": {
+          "index": 5,
+          "text": null,
+          "style": {
+            "color": "#c4c4c4",
+            "border": "#b0b0b0",
+            "var_name": "grey"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "changedAt": 1752180680.6958964,
+      "isTopGroup": true,
+      "triggerUuid": "1ecdcf944f69dd2c9c24ff15e6d4451e"
+    }
+  },
+  "id": "3781b01c-6a80-4fde-8a7c-06c889e28c50",
+  "created_at": "2025-07-10T20:51:26.392621",
+  "status": "active"
+}

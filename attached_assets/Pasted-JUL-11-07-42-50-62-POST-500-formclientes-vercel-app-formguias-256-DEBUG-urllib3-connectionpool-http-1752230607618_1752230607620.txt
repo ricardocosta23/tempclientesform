@@ -1,0 +1,86 @@
+JUL 11 07:42:50.62
+POST
+500
+formclientes.vercel.app
+/formguias
+256
+DEBUG:urllib3.connectionpool:https://api.monday.com:443 "POST /v2 HTTP/1.1" 200 None
+JUL 11 07:42:40.62
+GET
+404
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/favicon.ico
+127.0.0.1 - - [11/Jul/2025 10:42:40] "GET /favicon.ico HTTP/1.1" 404 -
+JUL 11 07:42:40.32
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/static/images/fundo.png
+127.0.0.1 - - [11/Jul/2025 10:42:40] "GET /static/images/fundo.png HTTP/1.1" 200 -
+JUL 11 07:42:40.23
+GET
+404
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/favicon.ico
+127.0.0.1 - - [11/Jul/2025 10:42:40] "GET /favicon.ico HTTP/1.1" 404 -
+JUL 11 07:42:40.03
+GET
+404
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/favicon.png
+127.0.0.1 - - [11/Jul/2025 10:42:40] "GET /favicon.png HTTP/1.1" 404 -
+JUL 11 07:42:40.02
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/static/images/fundo.png
+127.0.0.1 - - [11/Jul/2025 10:42:40] "GET /static/images/fundo.png HTTP/1.1" 200 -
+JUL 11 07:42:39.94
+GET
+404
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/favicon.ico
+127.0.0.1 - - [11/Jul/2025 10:42:39] "GET /favicon.ico HTTP/1.1" 404 -
+JUL 11 07:42:39.75
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/
+127.0.0.1 - - [11/Jul/2025 10:42:39] "GET / HTTP/1.1" 200 -
+JUL 11 07:42:39.73
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/static/css/style.css
+127.0.0.1 - - [11/Jul/2025 10:42:39] "GET /static/css/style.css HTTP/1.1" 200 -
+JUL 11 07:42:39.59
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/static/css/style.css
+127.0.0.1 - - [11/Jul/2025 10:42:40] "GET /static/css/style.css HTTP/1.1" 200 -
+JUL 11 07:42:39.59
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/
+127.0.0.1 - - [11/Jul/2025 10:42:39] "GET / HTTP/1.1" 200 -
+JUL 11 07:42:39.36
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/
+127.0.0.1 - - [11/Jul/2025 10:42:39] "GET / HTTP/1.1" 200 -
+JUL 11 07:42:38.97
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/
+127.0.0.1 - - [11/Jul/2025 10:42:39] "GET / HTTP/1.1" 200 -
+JUL 11 07:42:38.95
+GET
+200
+formclientes-7mxx7spyg-ricardos-projects-10b2b253.vercel.app
+/
+127.0.0.1 - - [11/Jul/2025 10:42:39] "GET / HTTP/1.1" 200 -
+No more logs to show within selected timeline

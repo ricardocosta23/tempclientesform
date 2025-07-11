@@ -1,0 +1,117 @@
+✅ Query para IA do Replit (Vercel + Flask App para Formulários com Monday.com)
+Cole o texto abaixo no prompt da IA do Replit:
+
+Quero criar um app em Python com Flask para ser hospedado no Vercel, com as seguintes especificações:
+
+🧩 Estrutura geral:
+A aplicação deve ter:
+
+vercel.json com roteamento para endpoints.
+
+requirements.txt com dependências adequadas para rodar Flask no Vercel.
+
+Suporte a Webhooks para criação de formulários.
+
+Um sistema de configuração para gerenciar quais colunas e quadros usar no Monday.com.
+
+📄 Tipos de formulário:
+Guias
+
+Clientes
+
+Fornecedores
+
+🔁 Endpoints:
+POST /formguias
+
+POST /formclientes
+
+POST /formfornecedores
+
+Cada um:
+
+Recebe dados de um webhook.
+
+Usa um Setup pré-definido para gerar um formulário dinâmico baseado no tipo.
+
+Cria um formulário (HTML com perguntas).
+
+Retorna o link do formulário gerado.
+
+Atualiza uma coluna específica em um quadro do Monday.com com o link (definida no Setup).
+
+🧠 Setup Dinâmico:
+Preciso de uma forma de configurar:
+
+Nome dos quadros A (de onde vem perguntas) e B (onde salva respostas), por tipo de formulário.
+
+Coluna onde o link do formulário será salvo (em B).
+
+Lista de perguntas (manuais ou importadas de coluna do quadro A).
+
+Tipo da pergunta:
+
+Sim/Não
+
+Nota de 1 a 10
+
+Texto
+
+Texto Longo
+
+Condições (ex: só mostrar se outra pergunta tiver valor X).
+
+Mapeamento: indicar se o valor da resposta é o mesmo da pergunta (para perguntas importadas).
+
+Essas configurações podem ser salvas localmente em um arquivo .json ou .py.
+
+🖥 Interface Web:
+Criar uma página/admin interface para:
+
+Cadastrar novas perguntas para cada tipo de formulário.
+
+Definir origem (manual ou coluna do quadro A).
+
+Escolher destino (coluna no quadro B).
+
+Ativar/desativar perguntas.
+
+Editar condições e mapeamentos.
+
+Essa interface deve ser dinâmica, feita com JavaScript (AJAX/fetch) para interagir com o backend Flask sem recarregar a página.
+
+📦 Extras:
+A aplicação deve ser modular, limpa e com possibilidade de expandir.
+
+Pode usar SQLite ou JSON para persistir configurações.
+
+As integrações com o Monday.com devem usar a API (com token via env).
+
+🗂 Estrutura esperada:
+bash
+Copiar
+Editar
+/api
+  └── formguias.py
+  └── formclientes.py
+  └── formfornecedores.py
+  └── utils/
+      └── monday_api.py
+      └── form_generator.py
+/setup
+  └── config.json
+/static
+/templates
+/vercel.json
+/requirements.txt
+/app.py
+🔗 Resultado Esperado:
+Quando o webhook bate no endpoint /formguias, /formclientes ou /formfornecedores:
+
+O backend busca o setup do tipo correspondente.
+
+Cria um formulário HTML com as perguntas configuradas.
+
+Hospeda o formulário e gera um link.
+
+Atualiza a coluna do quadro B no Monday.com com esse link.

@@ -1,0 +1,110 @@
+{
+  "type": "guias",
+  "title": "Formulário de Avaliação - Guias",
+  "subtitle": "Avalie nossos serviços de guia turístico",
+  "questions": [
+    {
+      "destination_column": "text_mksdvk9t",
+      "id": "guide_name",
+      "required": true,
+      "source": "manual",
+      "text": " Nome de quem está avaliando:",
+      "type": "text"
+    },
+    {
+      "destination_column": "text_mkspcg2t",
+      "dropdown_options": "Guia;Monitor;Coordenador",
+      "id": "guide_role",
+      "is_conditional": false,
+      "required": true,
+      "source": "manual",
+      "text": "Qual foi sua função durante o evento?",
+      "type": "dropdown"
+    },
+    {
+      "destination_column": "text_mksd1r88",
+      "id": "guide_coordinator",
+      "required": true,
+      "source": "manual",
+      "text": "Quem foi seu coordenador direto?",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "",
+        "show_if": ""
+      },
+      "destination_column": "text_mksd83pc",
+      "id": "guide_malha_aerea",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "Teve malha aérea na viagem?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdw5nf",
+      "id": "question_1752079374857",
+      "is_conditional": true,
+      "required": true,
+      "source": "manual",
+      "text": "Nota malha aérea",
+      "type": "rating"
+    }
+  ],
+  "header_data": [],
+  "webhook_data": {
+    "event": {
+      "app": "monday",
+      "type": "update_column_value",
+      "triggerTime": "2025-07-10T14:23:03.287Z",
+      "subscriptionId": 541271596,
+      "isRetry": false,
+      "userId": 5522044,
+      "originalTriggerUuid": null,
+      "boardId": 9241811459,
+      "groupId": "topics",
+      "pulseId": 9332622622,
+      "pulseName": "Midway Noronha",
+      "columnId": "color_mksp6ebp",
+      "columnType": "color",
+      "columnTitle": "Status",
+      "value": {
+        "label": {
+          "index": 2,
+          "text": "webhook",
+          "style": {
+            "color": "#df2f4a",
+            "border": "#ce3048",
+            "var_name": "red-shadow"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "previousValue": {
+        "label": {
+          "index": 5,
+          "text": null,
+          "style": {
+            "color": "#c4c4c4",
+            "border": "#b0b0b0",
+            "var_name": "grey"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "changedAt": 1752157382.6382842,
+      "isTopGroup": true,
+      "triggerUuid": "2e451ee21365ffe8662306f6a934bcf1"
+    }
+  },
+  "id": "f00d06a3-f62c-413b-865e-e3c32ee2497c",
+  "created_at": "2025-07-10T14:23:04.373862",
+  "status": "active"
+}

@@ -1,0 +1,257 @@
+
+Received webhook data for Guias: {'event': {'app': 'monday', 'type': 'update_column_value', 'triggerTime': '2025-07-11T10:21:49.951Z', 'subscriptionId': 541649709, 'isRetry': False, 'userId': 5522044, 'originalTriggerUuid': None, 'boardId': 9241811459, 'groupId': 'topics', 'pulseId': 9312172556, 'pulseName': 'Top Trader XP', 'columnId': 'color_mksp6ebp', 'columnType': 'color', 'columnTitle': 'Status', 'value': {'label': {'index': 2, 'text': 'Enviar webhook', 'style': {'color': '#df2f4a', 'border': '#ce3048', 'var_name': 'red-shadow'}, 'is_done': False}, 'post_id': None}, 'previousValue': {'label': {'index': 5, 'text': None, 'style': {'color': '#c4c4c4', 'border': '#b0b0b0', 'var_name': 'grey'}, 'is_done': False}, 'post_id': None}, 'changedAt': 1752229309.5251946, 'isTopGroup': True, 'triggerUuid': '9d6272421a4206c3d82c2a53a6392f0c'}}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.monday.com:443
+DEBUG:urllib3.connectionpool:https://api.monday.com:443 "POST /v2 HTTP/1.1" 200 None
+Processing column data: {'id': 'lookup_mkrb9ns5', 'text': None, 'value': None, 'type': 'mirror', 'display_value': 'XP INC'}
+Using display_value: 'XP INC'
+Processing column data: {'id': 'lookup_mkrjh91x', 'text': None, 'value': None, 'type': 'mirror', 'display_value': 'Miami, Flórida, EUA'}
+Using display_value: 'Miami, Flórida, EUA'
+Processing column data: {'id': 'lookup_mkrjpdz0', 'text': None, 'value': None, 'type': 'mirror', 'display_value': '2025-06-29'}
+Using display_value: '2025-06-29'
+Header data collected: {'Viagem': 'Top Trader XP', 'Cliente': 'XP INC', 'Destino': 'Miami, Flórida, EUA', 'Data': '2025-06-29'}
+=== GUIA FORMS - ALL DESTINATION COLUMNS ===
+Question 2: ID=guide_name, Type=text
+Text:  Nome de quem está avaliando:
+Destination Column: 'text_mksdvk9t'
+Source Column: ''
+---
+Question 3: ID=guide_role, Type=dropdown
+Text: Qual foi sua função durante o evento?
+Destination Column: 'text_mksqftvq'
+Source Column: ''
+---
+Question 4: ID=guide_coordinator, Type=text
+Text: Quem foi seu coordenador direto?
+Destination Column: 'text_mksd1r88'
+Source Column: ''
+---
+Question 6: ID=guide_malha_aerea, Type=yesno
+Text: Teve malha aérea na viagem?
+Destination Column: 'text_mksd83pc'
+Source Column: ''
+---
+Question 7: ID=question_1752079374857, Type=rating
+Text: Nota malha aérea
+Destination Column: 'numeric_mksdw5nf'
+Source Column: ''
+---
+Question 8: ID=question_1752158225918, Type=longtext
+Text: Informe as cias utilizadas para o grupo com uma br...
+Destination Column: 'long_text_mksdw43g'
+Source Column: ''
+---
+Question 9: ID=question_1752158102105, Type=yesno
+Text: Teve No Show?
+Destination Column: 'text_mksdsh42'
+Source Column: ''
+---
+Question 10: ID=question_1752158124136, Type=text
+Text: Informar quantidade de No show
+Destination Column: 'numeric_mksdwqef'
+Source Column: ''
+---
+Question 11: ID=question_1752158145271, Type=longtext
+Text: Nome dos convidados No show
+Destination Column: 'long_text_mksdpbqr'
+Source Column: ''
+---
+Question 12: ID=question_1752158172655, Type=rating
+Text: As marcações de assento foram adequadas ao grupo?
+Destination Column: 'numeric_mksd3094'
+Source Column: ''
+---
+Question 13: ID=question_1752158183825, Type=yesno
+Text: Teve equipe de assistência do aeroporto?
+Destination Column: 'text_mksd9gy3'
+Source Column: ''
+---
+Question 14: ID=question_1752158192367, Type=rating
+Text: Nota assistência aeroporto
+Destination Column: 'numeric_mksdt1bq'
+Source Column: ''
+---
+Question 15: ID=question_1752158205456, Type=yesno
+Text: Teve conexão?
+Destination Column: 'text_mksd77w3'
+Source Column: ''
+---
+Question 16: ID=question_1752158215774, Type=rating
+Text: Nota do tempo de conexão
+Destination Column: 'numeric_mksds0py'
+Source Column: ''
+---
+Question 18: ID=question_1752158878674, Type=yesno
+Text: Trabalhamos com DMC?
+Destination Column: 'text_mksdfbbm'
+Source Column: ''
+---
+Question 19: ID=question_1752158899665, Type=text
+Text: Nome do DMC
+Destination Column: 'text_mksdhgmp'
+Source Column: ''
+---
+Question 20: ID=question_1752158913249, Type=text
+Text: Nome coordenador DMC
+Destination Column: 'text_mksdpj36'
+Source Column: ''
+---
+Question 21: ID=question_1752158929184, Type=rating
+Text: Avalie o DMC: De forma geral considerando disponib...
+Destination Column: 'numeric_mksdja3e'
+Source Column: ''
+---
+Question 22: ID=question_1752158940898, Type=yesno
+Text: Usou mais um DMC?
+Destination Column: ''
+Source Column: ''
+---
+Question 23: ID=question_1752158960696, Type=text
+Text: Nome do 2º DMC
+Destination Column: 'text_mksdaqvj'
+Source Column: ''
+---
+Question 24: ID=question_1752158983407, Type=text
+Text: Nome coordenador 2º DMC
+Destination Column: 'text_mksdcb45'
+Source Column: ''
+---
+Question 25: ID=question_1752159002448, Type=rating
+Text: Avalie o segundo DMC: De forma geral considerando ...
+Destination Column: 'numeric_mksdv98h'
+Source Column: ''
+---
+Question 27: ID=question_1752159011799, Type=yesno
+Text: Tiveram Guias Locais?
+Destination Column: 'text_mksqbpvq'
+Source Column: ''
+---
+Question 28: ID=question_1752159024351, Type=longtext
+Text: Insira os nomes dos guias locais
+Destination Column: 'long_text_mksdgq94'
+Source Column: ''
+---
+Question 29: ID=question_1752159034847, Type=rating
+Text: Avalie de forma geral o(s) guia(s) local(is): Cons...
+Destination Column: 'numeric_mksdsem2'
+Source Column: ''
+---
+Question 30: ID=question_1752159053248, Type=longtext
+Text: Utilize esse campo para comentários em relação ao ...
+Destination Column: 'long_text_mksdg5nd'
+Source Column: ''
+---
+Question 32: ID=question_1752159068118, Type=yesno
+Text: Tivemos serviço de transfer?
+Destination Column: 'text_mksd3zfv'
+Source Column: ''
+---
+Question 33: ID=question_1752159078174, Type=rating
+Text: Avalie de forma geral o serviço de  transfer consi...
+Destination Column: 'numeric_mksd391j'
+Source Column: ''
+---
+Question 34: ID=question_1752159094536, Type=longtext
+Text: Deixe seus comentários em relação ao transfer
+Destination Column: 'long_text_mksdxghk'
+Source Column: ''
+---
+Question 36: ID=question_1752160095686, Type=monday_column
+Text:
+Destination Column: 'numeric_mkrjpfxv'
+Question Destination Column: 'text_mkrjf13y'
+Source Column: 'text_mkrj9z52'
+---
+Question 37: ID=question_1752174171731, Type=monday_column
+Text:
+Destination Column: 'numeric_mkrjg1ar'
+Question Destination Column: 'text_mkrjk4yg'
+Source Column: 'text_mkrjz0tf'
+---
+Question 39: ID=question_1752174708360, Type=yesno
+Text: Tivemos alimentação inclusa?
+Destination Column: 'text_mksqsmjv'
+Source Column: ''
+---
+Question 40: ID=question_1752174756966, Type=rating
+Text: Nota restaurantes
+Destination Column: 'numeric_mksqce6j'
+Source Column: ''
+---
+Question 41: ID=question_1752177017103, Type=longtext
+Text: Comentários alimentação
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.monday.com:443
+Destination Column: ''
+Source Column: ''
+---
+Question 43: ID=question_1752174932540, Type=monday_column
+Text:
+Destination Column: 'numeric_mkrj6132'
+Question Destination Column: 'text_mksdf2av'
+Source Column: 'dropdown_mksdfja5'
+---
+Question 44: ID=question_1752174958808, Type=monday_column
+Text:
+Destination Column: 'numeric_mksdsjte'
+Question Destination Column: 'text_mksd268p'
+Source Column: 'dropdown_mksds964'
+---
+Question 45: ID=question_1752174977015, Type=monday_column
+Text:
+Destination Column: 'numeric_mksdyxw2'
+Question Destination Column: 'text_mksdr0qv'
+Source Column: 'dropdown_mksdhq4q'
+---
+Question 46: ID=question_1752174998832, Type=monday_column
+Text:
+Destination Column: 'numeric_mksdy42p'
+Question Destination Column: 'text_mksdppd8'
+Source Column: 'dropdown_mksdspz0'
+---
+Question 47: ID=question_1752175115236, Type=longtext
+Text: Comentários sobre passeios (se houver)
+Destination Column: 'long_text_mksq9zqr'
+Source Column: ''
+---
+Question 49: ID=question_1752177398886, Type=yesno
+Text: Houve ocorrências médicas?
+Destination Column: 'text_mksdp1ta'
+Source Column: ''
+---
+Question 50: ID=question_1752177418807, Type=yesno
+Text: O seguro foi acionado?
+Destination Column: 'text_mksd2s53'
+Source Column: ''
+---
+Question 51: ID=question_1752177448310, Type=yesno
+Text: Informe se o convidado recebeu os comprovantes nec...
+Destination Column: 'text_mksd83af'
+Source Column: ''
+---
+Question 53: ID=question_1752177476605, Type=yesno
+Text: Houve extravio de bagagens?
+Destination Column: 'text_mksdncb6'
+Source Column: ''
+---
+Question 54: ID=question_1752177496581, Type=yesno
+Text: Foi aberto protocolo na cia aérea
+Destination Column: 'text_mksdncb6'
+Source Column: ''
+---
+Question 56: ID=question_1752177527819, Type=yesno
+Text: Houve custos extras a serem cobrados do cliente? S...
+Destination Column: 'text_mksq4pty'
+Source Column: ''
+---
+Question 57: ID=question_1752178934330, Type=longtext
+Text: Quais custos?
+Destination Column: 'long_text_mksq9rnp'
+Source Column: ''
+---
+Question 59: ID=question_1752177675991, Type=yesno
+Text: Houve material de criação produzido pela TOP SERVI...
+Destination Column: 'text_mksdts20'
+Source Column: ''
+---
+Question 60: ID=question_1752177353487, Type=rating
+Text: Avalie os materiais produzidos pela Top Service na...
+Destination Column: 'numeric_mksqebx9'

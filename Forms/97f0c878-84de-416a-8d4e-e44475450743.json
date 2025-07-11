@@ -1,0 +1,401 @@
+{
+  "type": "guias",
+  "title": "Formulário de Avaliação - Guias",
+  "subtitle": "Avalie nossos serviços de guia turístico",
+  "questions": [
+    {
+      "id": "divider_1752174142505",
+      "type": "divider",
+      "title": "✏️ Dados Pessoais"
+    },
+    {
+      "destination_column": "text_mksdvk9t",
+      "id": "guide_name",
+      "required": true,
+      "source": "manual",
+      "text": " Nome de quem está avaliando:",
+      "type": "text"
+    },
+    {
+      "destination_column": "text_mkspcg2t",
+      "dropdown_options": "Guia;Monitor;Coordenador",
+      "id": "guide_role",
+      "required": true,
+      "source": "manual",
+      "text": "Qual foi sua função durante o evento?",
+      "type": "dropdown"
+    },
+    {
+      "destination_column": "text_mksd1r88",
+      "id": "guide_coordinator",
+      "required": true,
+      "source": "manual",
+      "text": "Quem foi seu coordenador direto?",
+      "type": "text"
+    },
+    {
+      "id": "divider_1752173694375",
+      "title": "✈️ Malha Aérea",
+      "type": "divider"
+    },
+    {
+      "destination_column": "text_mksd83pc",
+      "id": "guide_malha_aerea",
+      "required": true,
+      "source": "manual",
+      "text": "Teve malha aérea na viagem?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": "numeric_mksdw5nf",
+      "id": "question_1752079374857",
+      "required": true,
+      "source": "manual",
+      "text": "Nota malha aérea",
+      "type": "rating"
+    },
+    {
+      "conditional": {
+        "depends_on": "guide_malha_aerea",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158225918",
+      "required": false,
+      "source": "manual",
+      "text": "Informe as cias utilizadas para o grupo com uma breve avaliação, considerando: Pontualidade, serviço de bordo, bagagens e uma perspectiva geral sobre a dinâmica de embarque e desembarque.",
+      "type": "longtext"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752158102105",
+      "required": true,
+      "source": "manual",
+      "text": "Teve No Show?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158124136",
+      "required": true,
+      "source": "manual",
+      "text": "Informar quantidade de No show ",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158102105",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158145271",
+      "required": true,
+      "source": "manual",
+      "text": "Nome dos convidados No show ",
+      "type": "longtext"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752158172655",
+      "required": true,
+      "source": "manual",
+      "text": "As marcações de assento foram adequadas ao grupo?",
+      "type": "rating"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752158183825",
+      "required": false,
+      "source": "manual",
+      "text": "Teve equipe de assistência do aeroporto? ",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158183825",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158192367",
+      "required": false,
+      "source": "manual",
+      "text": "Nota assistência aeroporto",
+      "type": "rating"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752158205456",
+      "required": false,
+      "source": "manual",
+      "text": "Teve conexão?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158205456",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158215774",
+      "required": false,
+      "source": "manual",
+      "text": "Nota do tempo de conexão",
+      "type": "rating"
+    },
+    {
+      "id": "divider_1752173694375",
+      "title": "💼 DMC",
+      "type": "divider"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752158878674",
+      "required": false,
+      "source": "manual",
+      "text": "Trabalhamos com DMC?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158899665",
+      "required": false,
+      "source": "manual",
+      "text": "Nome do DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158913249",
+      "required": false,
+      "source": "manual",
+      "text": "Nome coordenador DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158878674",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158929184",
+      "required": false,
+      "source": "manual",
+      "text": "Avalie o DMC: De forma geral considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação",
+      "type": "rating"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752158940898",
+      "required": false,
+      "source": "manual",
+      "text": "Usou mais um DMC?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158960696",
+      "required": false,
+      "source": "manual",
+      "text": "Nome do 2º DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752158983407",
+      "required": false,
+      "source": "manual",
+      "text": "Nome coordenador 2º DMC",
+      "type": "text"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752158940898",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752159002448",
+      "required": false,
+      "source": "manual",
+      "text": "Avalie o segundo DMC: De forma geral considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação",
+      "type": "rating"
+    },
+    {
+      "id": "divider_1752173694375",
+      "title": "🚩 Guias Locais",
+      "type": "divider"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752159011799",
+      "required": false,
+      "source": "manual",
+      "text": "Tiveram Guias Locais?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752159024351",
+      "required": false,
+      "source": "manual",
+      "text": "Insira os nomes dos guias locais",
+      "type": "longtext"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752159034847",
+      "required": false,
+      "source": "manual",
+      "text": "Avalie de forma geral o (s)  guia (s)  local: Considerando disponibilidade, eficiência na prestação de serviços, cordialidade e flexibilidade na operação ",
+      "type": "rating"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159011799",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752159053248",
+      "required": false,
+      "source": "manual",
+      "text": "Utilize esse campo para comentários em relação ao operador local. Caso algum guia tenha tido uma atitude inadequada ou queira ressaltar alguma ocorrência utilize este campo.",
+      "type": "longtext"
+    },
+    {
+      "id": "divider_1752173694375",
+      "title": "🚌 Transfer",
+      "type": "divider"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752159068118",
+      "required": false,
+      "source": "manual",
+      "text": "Tivemos serviço de transfer?",
+      "type": "yesno"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159068118",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752159078174",
+      "required": true,
+      "source": "manual",
+      "text": "Avalie de forma geral o serviço de  transfer considerando pontualidade, cordialidade, quantidade de veículos, limpeza e equipamentos.",
+      "type": "rating"
+    },
+    {
+      "conditional": {
+        "depends_on": "question_1752159068118",
+        "show_if": "yes"
+      },
+      "destination_column": "",
+      "id": "question_1752159094536",
+      "required": false,
+      "source": "manual",
+      "text": "Deixe seus comentários em relação ao transfer",
+      "type": "longtext"
+    },
+    {
+      "id": "divider_1752173694375",
+      "title": "🛏️ Hotés",
+      "type": "divider"
+    },
+    {
+      "destination_column": "",
+      "id": "question_1752160095686",
+      "required": false,
+      "source": "manual",
+      "source_column": "text_mkrj9z52",
+      "text": "",
+      "type": "monday_column",
+      "column_value": "Dados não encontrados"
+    },
+    {
+      "id": "question_1752174171731",
+      "type": "monday_column",
+      "text": "",
+      "required": false,
+      "source": "manual",
+      "source_column": "text_mkrjz0tf",
+      "column_value": "Dados não encontrados"
+    }
+  ],
+  "header_data": {
+    "Viagem": "AMD pelo Mundo",
+    "Cliente": "AMD PROCESSADORES",
+    "Destino": "Mendoza, Argentina",
+    "Data": "2025-09-15"
+  },
+  "webhook_data": {
+    "event": {
+      "app": "monday",
+      "type": "update_column_value",
+      "triggerTime": "2025-07-10T19:06:38.626Z",
+      "subscriptionId": 541513714,
+      "isRetry": false,
+      "userId": 5522044,
+      "originalTriggerUuid": null,
+      "boardId": 9241811459,
+      "groupId": "topics",
+      "pulseId": 9405819881,
+      "pulseName": "AMD pelo Mundo",
+      "columnId": "color_mksp6ebp",
+      "columnType": "color",
+      "columnTitle": "Status",
+      "value": {
+        "label": {
+          "index": 2,
+          "text": "webhook",
+          "style": {
+            "color": "#df2f4a",
+            "border": "#ce3048",
+            "var_name": "red-shadow"
+          },
+          "is_done": false
+        },
+        "post_id": null
+      },
+      "previousValue": null,
+      "changedAt": 1752174398.246868,
+      "isTopGroup": true,
+      "triggerUuid": "68bdddd029e3e8a4c051c01f91a35942"
+    }
+  },
+  "id": "97f0c878-84de-416a-8d4e-e44475450743",
+  "created_at": "2025-07-10T19:06:41.659063",
+  "status": "active"
+}

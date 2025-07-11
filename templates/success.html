@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Formulário Enviado - Sistema de Formulários{% endblock %}
+
+{% block content %}
+<div class="survey-header">
+    <div class="header-icons">
+        <div class="icon-wrapper">
+            <i data-feather="check-circle"></i>
+        </div>
+    </div>
+    <h1 class="survey-title">Formulário Enviado com Sucesso!</h1>
+    <p class="survey-subtitle">Obrigado por sua participação. Suas respostas foram registradas.</p>
+</div>
+
+<div class="text-center">
+    <div class="alert alert-success" role="alert">
+        <i data-feather="thumbs-up" class="me-2"></i>
+        Suas respostas foram processadas e salvas com sucesso.
+    </div>
+    
+    
+</div>
+{% endblock %}

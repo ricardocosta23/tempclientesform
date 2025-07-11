@@ -1,0 +1,376 @@
+{% extends "base.html" %}
+
+{% block title %}Painel Administrativo - Sistema de Formulários{% endblock %}
+
+{% block content %}
+<div id="admin-interface" class="admin-container">
+    <div class="admin-header">
+        <h1 class="survey-title text-white">Painel Administrativo</h1>
+        <p class="survey-subtitle text-white-50">Configure os formulários e integrações</p>
+    </div>
+    
+    <div class="admin-section">
+        <div class="form-type-tabs">
+          <!--<button type="button" class="tab-button active" data-tab="guias">
+                <i data-feather="map" class="me-2"></i>
+                Guias
+            </button>-->
+            <button type="button" class="tab-button" data-tab="clientes">
+                <i data-feather="users" class="me-2"></i>
+                Clientes
+            </button>
+           <!-- <button type="button" class="tab-button" data-tab="fornecedores">
+                <i data-feather="truck" class="me-2"></i>
+                Fornecedores
+            </button>-->
+            <button type="button" class="tab-button" data-tab="forms">
+                <i data-feather="file-text" class="me-2"></i>
+                Formulários Criados
+            </button>
+        </div>
+        
+        <!-- Guias Configuration -->
+        <div id="guias-config" class="config-form active">
+            <h3>Configuração - Guias</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="guias-board-a" class="form-label">Quadro A (Origem):</label>
+                        <input type="text" id="guias-board-a" class="form-control" placeholder="ID do quadro A">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="guias-board-b" class="form-label">Quadro B (Respostas):</label>
+                        <input type="text" id="guias-board-b" class="form-control" placeholder="ID do quadro B">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="guias-link-column" class="form-label">Coluna do link:</label>
+                        <input type="text" id="guias-link-column" class="form-control" placeholder="ID da coluna">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h4>Campos do Cabeçalho</h4>
+                <p class="text-muted">Configure os campos que aparecerão no cabeçalho do formulário (dados vindos do Quadro A)</p>
+                <div id="guias-header-fields">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 1:</label>
+                            <input type="text" id="guias-header-1-title" class="form-control config-input" 
+                                   data-path="guias.header_fields.0.title" placeholder="Ex: Nome do Cliente">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 1):</label>
+                            <input type="text" id="guias-header-1-column" class="form-control config-input" 
+                                   data-path="guias.header_fields.0.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 2:</label>
+                            <input type="text" id="guias-header-2-title" class="form-control config-input" 
+                                   data-path="guias.header_fields.1.title" placeholder="Ex: Data da Viagem">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 2):</label>
+                            <input type="text" id="guias-header-2-column" class="form-control config-input" 
+                                   data-path="guias.header_fields.1.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 3:</label>
+                            <input type="text" id="guias-header-3-title" class="form-control config-input" 
+                                   data-path="guias.header_fields.2.title" placeholder="Ex: Destino">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 3):</label>
+                            <input type="text" id="guias-header-3-column" class="form-control config-input" 
+                                   data-path="guias.header_fields.2.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 4:</label>
+                            <input type="text" id="guias-header-4-title" class="form-control config-input" 
+                                   data-path="guias.header_fields.3.title" placeholder="Ex: Guia Responsável">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 4):</label>
+                            <input type="text" id="guias-header-4-column" class="form-control config-input" 
+                                   data-path="guias.header_fields.3.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <div class="question-divider-line">
+                    <div class="divider-container">
+                        <div class="dotted-line"></div>
+                        <button type="button" class="divider-add-btn" onclick="adminInterface.showDividerInput(this, 'guias', -1)">
+                            <i data-feather="plus"></i>
+                        </button>
+                        <div class="dotted-line"></div>
+                    </div>
+                </div>
+                <div id="guias-questions"></div>
+            </div>
+        </div>
+        
+        <!-- Clientes Configuration -->
+        <div id="clientes-config" class="config-form">
+            <h3>Configuração - Clientes</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="clientes-board-a" class="form-label">Quadro A (Origem das perguntas):</label>
+                        <input type="text" id="clientes-board-a" class="form-control" placeholder="ID do quadro A">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="clientes-board-b" class="form-label">Quadro B (Salvar respostas):</label>
+                        <input type="text" id="clientes-board-b" class="form-control" placeholder="ID do quadro B">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="clientes-link-column" class="form-label">Coluna do link:</label>
+                        <input type="text" id="clientes-link-column" class="form-control" placeholder="ID da coluna">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h4>Campos do Cabeçalho</h4>
+                <p class="text-muted">Configure os campos que aparecerão no cabeçalho do formulário (dados vindos do Quadro A)</p>
+                <div id="clientes-header-fields">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 1:</label>
+                            <input type="text" id="clientes-header-1-title" class="form-control config-input" 
+                                   data-path="clientes.header_fields.0.title" placeholder="Ex: Nome do Cliente">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 1):</label>
+                            <input type="text" id="clientes-header-1-column" class="form-control config-input" 
+                                   data-path="clientes.header_fields.0.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 2:</label>
+                            <input type="text" id="clientes-header-2-title" class="form-control config-input" 
+                                   data-path="clientes.header_fields.1.title" placeholder="Ex: Serviço Contratado">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 2):</label>
+                            <input type="text" id="clientes-header-2-column" class="form-control config-input" 
+                                   data-path="clientes.header_fields.1.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 3:</label>
+                            <input type="text" id="clientes-header-3-title" class="form-control config-input" 
+                                   data-path="clientes.header_fields.2.title" placeholder="Ex: Data do Serviço">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 3):</label>
+                            <input type="text" id="clientes-header-3-column" class="form-control config-input" 
+                                   data-path="clientes.header_fields.2.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 4:</label>
+                            <input type="text" id="clientes-header-4-title" class="form-control config-input" 
+                                   data-path="clientes.header_fields.3.title" placeholder="Ex: Valor do Contrato">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 4):</label>
+                            <input type="text" id="clientes-header-4-column" class="form-control config-input" 
+                                   data-path="clientes.header_fields.3.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <div class="question-divider-line">
+                    <div class="divider-container">
+                        <div class="dotted-line"></div>
+                        <button type="button" class="divider-add-btn" onclick="adminInterface.showDividerInput(this, 'clientes', -1)">
+                            <i data-feather="plus"></i>
+                        </button>
+                        <div class="dotted-line"></div>
+                    </div>
+                </div>
+                <div id="clientes-questions"></div>
+            </div>
+        </div>
+        
+        <!-- Fornecedores Configuration -->
+        <div id="fornecedores-config" class="config-form">
+            <h3>Configuração - Fornecedores</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="fornecedores-board-a" class="form-label">Quadro A (Origem das perguntas):</label>
+                        <input type="text" id="fornecedores-board-a" class="form-control" placeholder="ID do quadro A">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="fornecedores-board-b" class="form-label">Quadro B (Salvar respostas):</label>
+                        <input type="text" id="fornecedores-board-b" class="form-control" placeholder="ID do quadro B">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="fornecedores-link-column" class="form-label">Coluna do link:</label>
+                        <input type="text" id="fornecedores-link-column" class="form-control" placeholder="ID da coluna">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h4>Campos do Cabeçalho</h4>
+                <p class="text-muted">Configure os campos que aparecerão no cabeçalho do formulário (dados vindos do Quadro A)</p>
+                <div id="fornecedores-header-fields">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 1:</label>
+                            <input type="text" id="fornecedores-header-1-title" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.0.title" placeholder="Ex: Nome do Fornecedor">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 1):</label>
+                            <input type="text" id="fornecedores-header-1-column" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.0.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 2:</label>
+                            <input type="text" id="fornecedores-header-2-title" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.1.title" placeholder="Ex: Tipo de Serviço">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 2):</label>
+                            <input type="text" id="fornecedores-header-2-column" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.1.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 3:</label>
+                            <input type="text" id="fornecedores-header-3-title" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.2.title" placeholder="Ex: Data do Contrato">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 3):</label>
+                            <input type="text" id="fornecedores-header-3-column" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.2.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Título do Campo 4:</label>
+                            <input type="text" id="fornecedores-header-4-title" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.3.title" placeholder="Ex: Status da Parceria">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Coluna Monday (Campo 4):</label>
+                            <input type="text" id="fornecedores-header-4-column" class="form-control config-input" 
+                                   data-path="fornecedores.header_fields.3.monday_column" placeholder="ID da coluna">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <div class="question-divider-line">
+                    <div class="divider-container">
+                        <div class="dotted-line"></div>
+                        <button type="button" class="divider-add-btn" onclick="adminInterface.showDividerInput(this, 'fornecedores', -1)">
+                            <i data-feather="plus"></i>
+                        </button>
+                        <div class="dotted-line"></div>
+                    </div>
+                </div>
+                <div id="fornecedores-questions"></div>
+            </div>
+        </div>
+        
+        <!-- Forms Management -->
+        <div id="forms-config" class="config-form">
+            <h3>Formulários Criados</h3>
+            <p class="text-muted">Visualize, acesse e gerencie todos os formulários gerados pelo sistema</p>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <button type="button" id="refreshForms" class="btn btn-outline-primary">
+                        <i data-feather="refresh-cw" class="me-2"></i>
+                        Atualizar Lista
+                    </button>
+                </div>
+                <div class="text-muted">
+                    <span id="formsCount">0</span> formulários encontrados
+                </div>
+            </div>
+            
+            <div id="formsContainer">
+                <div id="formsLoading" class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                    <p class="mt-2">Carregando formulários...</p>
+                </div>
+                
+                <div id="formsEmpty" class="text-center py-5" style="display: none;">
+                    <i data-feather="inbox" style="width: 48px; height: 48px;" class="text-muted mb-3"></i>
+                    <h5 class="text-muted">Nenhum formulário encontrado</h5>
+                    <p class="text-muted">Os formulários aparecerão aqui quando forem criados através dos webhooks</p>
+                </div>
+                
+                <div id="formsList" class="row" style="display: none;">
+                    <!-- Forms will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <button type="button" id="addQuestionBtn" class="btn btn-success btn-lg me-3">
+                <i data-feather="plus" class="me-2"></i>
+                Adicionar Nova Pergunta
+            </button>
+            <br>
+            <br>
+            <button type="button" id="saveConfig" class="btn btn-primary btn-lg">
+                <i data-feather="save" class="me-2"></i>
+                Salvar Configuração
+            </button>
+        </div>
+    </div>
+    
+    <div class="text-center mt-3">
+        <a href="/" class="btn btn-outline-light">
+            <i data-feather="arrow-left" class="me-2"></i>
+            Voltar ao Início
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+<script>
+    feather.replace();
+</script>
+{% endblock %}
